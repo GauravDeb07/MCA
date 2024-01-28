@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="static/try.css">
+</head>
+
+<body>
+    <div class="container ">
+        <div id="symptomChecker">
+            <img src="static/img/3.jpg" alt="Logo" class="logo"> SymptoChecker
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        {% if log %}
+        <p>Welcome {{ log }}</p>
+        {% endif %}
+    </div>
+
+    <div class="form-container">
+        <form action="PatientDetails" method="post" enctype="multipart/form-data">
+            <label for="DateOfBirth">Date of Birth:</label>
+            <input type="text" id="DateOfBirth" name="DateOfBirth" required>
+
+            <label for="Weight">Enter Weight:</label>
+            <input type="text" id="Weight" name="Weight" required>
+
+            <label for="Height">Enter Height:</label>
+            <input type="text" id="Height" name="Height" required>
+
+            <label for="BloodType">Select Blood Type:</label>
+            <select id="BloodType" name="BloodType" required>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

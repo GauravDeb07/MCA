@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Login/Register</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div id="loginFormContainer">
+                <h2>Login</h2>
+                <form>
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" name="loginUsername" required>
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p>New User? <a href="#" onclick="showRegisterForm()">Click here</a></p>
+            </div>
+            
+            <div id="registerFormContainer" style="display:none;">
+                <h2>Register</h2>
+                <form>
+                    <label for="registerUsername">Username:</label>
+                    <input type="text" id="registerUsername" name="registerUsername" required>
+                    <label for="registerPassword">Password:</label>
+                    <input type="password" id="registerPassword" name="registerPassword" required>
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <button type="submit">Register</button>
+                </form>
+                <p>Already a user? <a href="#" onclick="showLoginForm()">Click here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var initialBackground = "url('static/img/img4.png')";
+
+        function showRegisterForm() {
+            document.getElementById("loginFormContainer").style.display = "none";
+            document.getElementById("registerFormContainer").style.display = "block";
+            document.body.style.backgroundImage = "url('static/img/img3.jpg')";
+        }
+
+        function showLoginForm() {
+            document.getElementById("registerFormContainer").style.display = "none";
+            document.getElementById("loginFormContainer").style.display = "block";
+            document.body.style.backgroundImage = initialBackground;
+        }
+        showLoginForm();
+    </script>
+</body>
+</html>

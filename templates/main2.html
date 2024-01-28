@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Detail Input</title>
+    <link rel="stylesheet" href="static/main.css"> 
+</head>
+
+<body>
+    <div class="container">
+        <div id="symptomChecker">
+            <img src="static/img/3.jpg" alt="Logo" class="logo" style="margin-left: 20px; margin-top: 20px;">
+            SymptoDetect
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        {% if log %}
+        <p>Welcome Dr.<u><span style="color:#1941e0;">{{ log }}</span></u></p>
+        {% endif %}
+    </div>
+
+    <div class="form-container">
+        <h2>Doctor Details</h2>
+        <form action="/submit_doctor_details" method="post">
+
+            <label for="specialization">Specialization:</label>
+            <input type="text" id="Specialization" name="Specialization" required><br>
+            
+            <label for="hospital">Hospital:</label>
+            <input type="text" id="hospital" name="hospital" required><br>
+            
+            <label for="experience">Experience:</label>
+            <input type="text" id="experience" name="Experience" required><br>
+            
+            <label for="contact_number">Contact Number:</label>
+            <input type="tel" id="contact_number" name="contact_number" required><br>
+
+
+            <a href="drmain.html"> <button id="imageButton" type="submit">Submit</button> </a>
+        </form>
+    </div>
+</body>
+
+</html>

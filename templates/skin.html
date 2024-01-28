@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom check Page</title>
+    <link rel="stylesheet" href="static/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="symptomChecker">
+            <img src="static/img/3.jpg" alt="Logo" class="logo"> SymptoChecker
+        </div>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="symptom-form">
+        <h2>Select Skin-related Symptoms:</h2>
+        <form action="/Respiratory" method="post">
+            <label>
+                <input type="checkbox" name="symptoms[]" value="Itching"> Itching
+            </label>
+            <label>
+                <input type="checkbox" name="symptoms[]" value="Skin Rash"> Skin Rash
+            </label>
+            <label>
+                <input type="checkbox" name="symptoms[]" value="Nodal Skin Eruptions"> Nodal Skin Eruptions
+            </label>
+            <label>
+                <input type="checkbox" name="symptoms[]" value="Patches in Throat"> Patches in Throat
+            </label>
+            <label>
+                <input type="checkbox" name="symptoms[]" value="Blackheads"> Blackheads
+            </label>
+            <label>
+                <input type="checkbox" name="symptoms[]" value="Pus-filled Pimples"> Pus-filled Pimples
+            </label>
+            <label>
+                <input type="checkbox" name="symptoms[]" value="Blister"> Blister
+            </label>
+            <label>
+                <input type="checkbox" name="symptoms[]" value="Red Sore Around Nose"> Red Sore Around Nose
+            </label>
+            <label>
+                <input type="checkbox" name="symptoms[]" value="Yellow Crust Ooze"> Yellow Crust Ooze
+            </label>
+            <label>
+                <input type="checkbox" name="symptoms[]" value="Skin Peeling"> Skin Peeling
+            </label>
+            <label>
+                <input type="checkbox" name="symptoms[]" value="Silver-like Dusting"> Silver-like Dusting
+            </label>
+            <label>
+                <input type="checkbox" name="symptoms[]" value="Small Dents in Nails"> Small Dents in Nails
+            </label>
+            <label>
+                <input type="checkbox" name="symptoms[]" value="Inflammatory Nails"> Inflammatory Nails
+            </label>
+            <label>
+                <input type="checkbox" name="symptoms[]" value="Dischromic Patches"> Dischromic Patches
+            </label>
+            <label>
+                <input type="checkbox" name="symptoms[]" value="Drying and Tingling Lips"> Drying and Tingling Lips
+            </label>
+            <label>
+                <input type="checkbox" name="symptoms[]" value="Bruising"> Bruising
+            </label>
+            <label>
+                <input type="checkbox" name="symptoms[]" value="Brittle Nails"> Brittle Nails
+            </label>
+            
+            <button type="submit">Next</button>
+        </form>
+    </div>
+</body>
+
+</html>
